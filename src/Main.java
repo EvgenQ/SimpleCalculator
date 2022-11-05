@@ -1,3 +1,4 @@
+import java.util.Map;
 import java.util.Scanner;
 
 public class Main {
@@ -14,7 +15,14 @@ public class Main {
         if(input.contains("+"))
         {
             String[] numbers = input.split("\\+");
-
+            if (numbers.length < 2)
+            {
+                throw new IllegalArgumentException("Нет второго операнда.");
+            }
+            if (numbers.length > 2)
+            {
+                throw new IllegalArgumentException("Операнда больше чем 2.");
+            }
             int sum = 0;
             for (String number: numbers)
             {
