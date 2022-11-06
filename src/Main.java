@@ -225,7 +225,6 @@ public class Main {
         String num = "";
         String num2 = "";
         int discharge = newSum.length();
-        StringBuilder x = new StringBuilder();
         for (int i = 0; i < newSum.length(); i++)
         {
             num += newSum.charAt(i);
@@ -248,7 +247,7 @@ public class Main {
             }
             else if(discharge == 1)
             {
-                int a = Integer.parseInt(num) * 1;
+                int a = Integer.parseInt(num);
                 num2 += arabian.get(a);
                 discharge--;
             }
@@ -260,7 +259,6 @@ public class Main {
 
     private static int covertToArabianNumber(String romanNumber)
     {
-        romanNumber.toUpperCase();
         int arabianNumber;
         Map<String,Integer> roman = new HashMap<>();
         roman.put("I",1);
