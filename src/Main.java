@@ -72,14 +72,11 @@ public class Main {
 
             if(arabNumber(numbers[0]) && arabNumber(numbers[1]))
             {
-                for (String number: numbers)
+                if (Integer.parseInt(numbers[0]) > 10 || Integer.parseInt(numbers[1]) > 10)
                 {
-                    if (Integer.parseInt(number) > 10)
-                    {
-                        throw new IllegalArgumentException("Одно из чисел больше 10 повторите попытку.");
-                    }
-                    sum -= Integer.parseInt(number);
+                    throw new IllegalArgumentException("Одно из чисел больше 10 повторите попытку.");
                 }
+                sum = Integer.parseInt(numbers[0]) - Integer.parseInt(numbers[1]);
             }
             else if (romanNumber(numbers[0]) && romanNumber(numbers[1]))
             {
@@ -120,18 +117,15 @@ public class Main {
 
             if(arabNumber(numbers[0]) && arabNumber(numbers[1]))
             {
-                for (String number: numbers)
+                if (Integer.parseInt(numbers[0]) > 10 || Integer.parseInt(numbers[1]) > 10)
                 {
-                    if (Integer.parseInt(number) > 10)
-                    {
-                        throw new IllegalArgumentException("Одно из чисел больше 10 повторите попытку.");
-                    }
-                    if (Integer.parseInt(number) == 0)
-                    {
-                        throw new ArithmeticException("На ноль делить нельзя.");
-                    }
-                    sum /= Integer.parseInt(number);
+                    throw new IllegalArgumentException("Одно из чисел больше 10 повторите попытку.");
                 }
+                if (Integer.parseInt(numbers[0]) == 0 || Integer.parseInt(numbers[1]) == 0)
+                {
+                    throw new ArithmeticException("На ноль делить нельзя.");
+                }
+                sum = Integer.parseInt(numbers[0]) / Integer.parseInt(numbers[1]);
             }
             else if (romanNumber(numbers[0]) && romanNumber(numbers[1]))
             {
@@ -167,14 +161,11 @@ public class Main {
 
             if(arabNumber(numbers[0]) && arabNumber(numbers[1]))
             {
-                for (String number: numbers)
+                if (Integer.parseInt(numbers[0]) > 10 || Integer.parseInt(numbers[1]) > 10)
                 {
-                    if (Integer.parseInt(number) > 10)
-                    {
-                        throw new IllegalArgumentException("Одно из чисел больше 10 повторите попытку.");
-                    }
-                    sum *= Integer.parseInt(number);
+                    throw new IllegalArgumentException("Одно из чисел больше 10 повторите попытку.");
                 }
+                sum = Integer.parseInt(numbers[0]) * Integer.parseInt(numbers[1]);
             }
             else if (romanNumber(numbers[0]) && romanNumber(numbers[1]))
             {
